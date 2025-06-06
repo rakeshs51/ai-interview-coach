@@ -21,7 +21,7 @@ export const AIModel = async (topic, coachingOption, lastTwoConversation) => {
     const PROMPT = (option.prompt).replace('{user_topic}', topic)
 
     const completion = await openai.chat.completions.create({
-        model: "openai/gpt-4o-mini",
+        model: "sarvamai/sarvam-m:free",
         messages: [
             { role: 'assistant', content: PROMPT },
             ...lastTwoConversation
