@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { CoachingOptions } from '@/services/Options';
 import Image from 'next/image';
 import { BlurFade } from '@/components/magicui/blur-fade';
+import UserInputDialog from './UserInputDialog';
 
 function FeatureAssistant() {
     const user = useUser();
@@ -26,7 +27,7 @@ function FeatureAssistant() {
                     <BlurFade key={option.icon} delay={0.25 + index * 0.05} inView>
                         <div key={index} className='p-3 bg-secondary rounded-3xl flex flex-col
                      justify-center items-center cursor-pointer'>
-                            {/* <UserInputDialog coachingOption={option} > */}
+                            <UserInputDialog coachingOption={option} >
                                 <div key={index} className='flex flex-col
                      justify-center items-center'>
                                     <Image src={option.icon} alt={option.name}
@@ -36,7 +37,7 @@ function FeatureAssistant() {
                                     />
                                     <h2 className='mt-2'>{option.name}</h2>
                                 </div>
-                            {/* </UserInputDialog> */}
+                            </UserInputDialog>
                         </div>
                 </BlurFade>
                 ))}
