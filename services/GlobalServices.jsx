@@ -48,9 +48,9 @@ export const AIModelToGenerateFeedbackAndNotes = async (coachingOption, conversa
 }
 
 
-const elevenlabs = new ElevenLabsClient({
-    apiKey: process.env.NEXT_PUBLIC_ELEVENLAB_API_KEY, // Defaults to process.env.ELEVENLABS_API_KEY
-});
+// const elevenlabs = new ElevenLabsClient({
+//     apiKey: process.env.NEXT_PUBLIC_ELEVENLAB_API_KEY, // Defaults to process.env.ELEVENLABS_API_KEY
+// });
 
 export const ConvertTextToSpeech = async (text, expertName) => {
 
